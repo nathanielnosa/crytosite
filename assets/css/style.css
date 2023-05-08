@@ -252,9 +252,12 @@
 #flex .container{
     display: flex;
     gap: 1rem;
+    width: 85%;
+    margin: 0 auto;
 }
 #flex .container .card{
     border: 1px solid black;
+    padding: .8rem;
 }
 
 
