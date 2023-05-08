@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+/* color variables */
+/* color variables */
+:root{
+    --primary-color: #151618;
+    --secondary-color: #30AE69;
+    --white-color : #fff;
+    --light-grey: #b7b7b7;
+    --black-color: #000;
+}
+
+/* utilities */
+/* utilities */
+
+/* btns */
+.btn{
+    background: var(--black-color);
+    color: var(--white-color);
+    border: none;
+    padding: 1.3rem 3rem;
+    box-shadow: 0 .2rem .4rem var(--white-color);
+    border-radius: .6rem;
+    text-transform: capitalize;
+    font-size: .9rem;
+    letter-spacing: 2px;
+    margin-top: 3rem;
+}
+.btn:hover{
+    transform:translateY(-20%);
+    transition: all 1s ease;
+}
+
+
+
+/* navbar */
+/* navbar */
+.navbar{
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.navbar .logo{
+    color: var(--white-color);
+    font-size: 2rem;
+}
+
+.navbar ul li{
+    display: inline;
+    padding: 0 1.5rem;
+    color: var(--white-color);
+}
+.navbar ul li a{
+    color: var(--white-color);
+    text-transform: capitalize;
+    position: relative;
+}
+
+.navbar ul li a.active::before{
+    content: "";
+    width: 100%;
+    border: 2px solid var(--white-color);
+    position: absolute;
+    top: 1.5rem;
+}
+.navbar ul li a:hover::before{
+    content: "";
+    width: 100%;
+    border: 2px solid var(--white-color);
+    position: absolute;
+    top: 1.5rem;
+}
+
+/* banner */
+/* banner */
+#banner{
+    background: url(/assets/img/CRYPTO-background.png);
+    background-size: cover;
+    background-position: center  center;
+    height: 80vh;
+}
+
+#banner .container{
+    color: var(--white-color);
+    width: 85%;
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#banner .container .text-cont h2{
+    font-size: 4rem;
+}
+#banner .container .text-cont h3{
+    font-size: 2.6rem;
+}
+
+
+#banner .container .img-cont img{
+    width: 100%;
+}
+
+/* intro style */
+/* intro style */
+.intro h3{
+    text-align: center;
+    text-transform: capitalize;
+    position: relative;
+    font-size: 1.8rem;
+}
+.intro h3::before{
+    content: "";
+    width: 3%;
+    border: 2px solid var(--secondary-color);
+    position: absolute;
+    top: 2.4rem;
+    right: 48.7%;
+}
+
+/* how it works */
+/* how it works */
+
+#hiw{
+    padding: 4rem 0;
+}
+
+#hiw .container{
+    width:85%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap: 1rem;
+    
+}
+
+#hiw .container .card{
+    text-align: center;
+}
+#hiw .container .card:nth-child(1){
+    grid-row: 3/1;
+}
+/* #hiw .container .card:nth-child(4){
+    grid-row: 3/1;
+} */
+
+#hiw .container .card .card-img{
+    background-color: var(--light-grey);
+    padding: 4rem;
+    border-radius: .3rem;
+}
+
+#hiw .container .card .card-img img{
+    width: 30%;
+}
+
+#hiw .container .card:hover .card-img{
+    background: var(--secondary-color);
+    cursor: pointer;
+}
+
+#hiw .container .card .card-body h5{
+    position: relative;
+}
+
+#hiw .container .card .card-body p{
+    color: var(--light-grey);
+}
+#hiw .container .card:hover p{
+    color: var(--black-color);
+}
+#hiw .container .card:hover h5::before{
+    content: "";
+    width: 10%;
+    border: 2px solid var(--secondary-color);
+    position: absolute;
+    top: 1.4rem;
+    right: 43%;
+}
+
+/* about */
+/* about */
+#about .container{
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#about .container p{
+    width: 85%;
+    margin:3rem auto;
+}
+
+/* power */
+/* power */
+#power{
+    margin: 5rem 0;
+    background: rgb(18,234,150);
+    background: linear-gradient(90deg, rgba(18,234,150,1) 0%, rgba(2,234,150,1) 33%, rgba(7,90,135,1) 63%, rgba(8,51,131,1) 100%);
+    position: relative;
+    height: 50vh;
+}
+#power .container{
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+#power .container .text-cont h1{
+    color: var(--white-color);
+    font-size: 2.3rem;
+    font-weight: 900;
+}
+#power .container .text-cont p{
+    color: var(--black-color);
+    font-size: .9rem;
+    width: 65%;
+    margin: 1.6rem 0;
+}
+#power .container .text-cont .text-img{
+    padding-top: 2rem;
+    display: flex;
+    gap: 3rem;
+}
+#power .container .text-cont .text-img span{
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#power .container .img-cont img{
+    position: absolute;
+    top: -45px;
+    right: 200px;
+}
+
+/* flex */
+/* flex */
+#flex .container{
+    display: flex;
+    gap: 1rem;
+}
+#flex .container .card{
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+/* Media Query */
+/* Media Query */
+
+/* tablet */
+/* mobile */
+
+@media only screen and (max-width:520px) {
+
+    
+/* navbar */
+/* navbar */
+.navbar{
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.navbar .logo{
+    color: var(--white-color);
+    font-size: 2rem;
+}
+.navbar ul{
+    display: none;
+}
+
+/* banner */
+/* banner */
+#banner{
+    background: url(/assets/img/CRYPTO-background.png);
+    background-size: cover;
+    background-position: center  center;
+    height: 50vh;
+}
+
+#banner .container{
+    color: var(--white-color);
+    width: 85%;
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+#banner .container .text-cont{
+    flex-grow: 2;
+    width: 100%;
+}
+#banner .container .text-cont h2{
+    font-size: 1.2rem;
+}
+#banner .container .text-cont h3{
+    font-size: .8rem;
+}
+
+#banner .container .img-cont img{
+    width: 60%;
+}
+
+/* btns */
+#banner .btn{
+    background: var(--black-color);
+    color: var(--white-color);
+    border: none;
+    padding: .8rem 1rem;
+    box-shadow: 0 .2rem .4rem var(--white-color);
+    border-radius: .2rem;
+    text-transform: capitalize;
+    font-size: .4rem;
+    letter-spacing: 1px;
+    margin-top: 3rem;
+}
+#banner .btn:hover{
+    transform:translateY(-20%);
+    transition: all 1s ease;
+}
+
+/* how it works */
+/* how it works */
+
+#hiw{
+    padding: 4rem 0;
+}
+
+#hiw .container{
+    width:85%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    gap: 1rem;
+    
+}
+
+#hiw .container .card{
+    text-align: center;
+}
+#hiw .container .card:nth-child(1){
+    grid-row: 1/1;
+}
+
+
+#hiw .container .card .card-img{
+    background-color: var(--light-grey);
+    padding: 2rem;
+    border-radius: .3rem;
+}
+
+#hiw .container .card .card-img img{
+    width: 30%;
+}
+
+#hiw .container .card:hover .card-img{
+    background: var(--secondary-color);
+    cursor: pointer;
+}
+
+#hiw .container .card .card-body h5{
+    position: relative;
+}
+
+#hiw .container .card .card-body p{
+    color: var(--light-grey);
+}
+#hiw .container .card:hover p{
+    color: var(--black-color);
+}
+#hiw .container .card:hover h5::before{
+    content: "";
+    width: 10%;
+    border: 2px solid var(--secondary-color);
+    position: absolute;
+    top: 1.4rem;
+    right: 43%;
+}
+
+/* about */
+/* about */
+#about .container{
+    text-align: center;
+    padding: 2rem 0;
+}
+#about .container img{
+    width: 100%;
+}
+
+#about .container p{
+    width: 85%;
+    margin:3rem auto;
+}
+
+
+/* power */
+/* power */
+#power{
+    margin: 5rem 0;
+    background: rgb(18,234,150);
+    background: linear-gradient(90deg, rgba(18,234,150,1) 0%, rgba(2,234,150,1) 33%, rgba(7,90,135,1) 63%, rgba(8,51,131,1) 100%);
+    position: none;
+    height: 30vh;
+}
+#power .container{
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+#power .container .text-cont h1{
+    color: var(--white-color);
+    font-size: .73rem;
+    font-weight: bold;
+}
+#power .container .text-cont p{
+    color: var(--black-color);
+    font-size: .6rem;
+    width: 65%;
+    margin: .76rem 0;
+}
+#power .container .text-cont .text-img{
+    padding-top: .2rem;
+    display: flex;
+    gap: 2rem;
+    width: 60%;
+}
+#power .container .text-cont .text-img img{
+    width: 40%;
+}
+#power .container .text-cont .text-img span{
+    color: var(--white-color);
+    font-size: .6rem;
+    font-weight: lighter;
+}
+
+#power .container .img-cont img{
+    width: 30%;
+    position: none;
+    top: 0;
+    right: 0;
+}
+
+
+/* flex */
+/* flex */
+#flex .container{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+#flex .container .card{
+    border: 1px solid black;
+}
+
+
+}
